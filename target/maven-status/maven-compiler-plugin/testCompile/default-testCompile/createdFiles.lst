@@ -1,3 +1,4 @@
-test\java\de\exxcellent\challenge\ReaderTest.class
 de\exxcellent\challenge\AppTest.class
+test\java\de\exxcellent\challenge\ReaderTest.class
+test\java\de\exxcellent\challenge\FoodballHandleTest.class
 test\java\de\exxcellent\challenge\WeaterdataHandlerTest.class
