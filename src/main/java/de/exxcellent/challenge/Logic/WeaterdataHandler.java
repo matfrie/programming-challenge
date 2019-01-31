@@ -9,11 +9,11 @@ import java.util.ArrayList;
  * Class that extracts and uses data from the Variable given bei the Reader
  * @author Matthias Friedrich
  */
-public class weaterdataHandler {
+public class WeaterdataHandler {
     CsvReader reader;
     ArrayList<String> data;
 
-    public weaterdataHandler(){
+    public WeaterdataHandler(){
       reader = new CsvReader();
     }
 
