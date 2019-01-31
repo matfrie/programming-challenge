@@ -41,12 +41,12 @@ public class WeaterdataHandler {
             //the firs day is always the current min spread
             if(MinSpreadDay == 0) {
                 MinSpreadDay = 1;
-                MinSpread = spread(currentMaxTemp, currentMinTemp);
+                MinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
             }
 
             //test if the current day is the day with the least spread
             else {
-                int currentMinSpread = spread(currentMaxTemp, currentMinTemp);
+                int currentMinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
 
                 if(currentMinSpread < MinSpread ){
                     MinSpreadDay = Integer.parseInt(currentDay);
@@ -57,14 +57,4 @@ public class WeaterdataHandler {
         return MinSpreadDay;
     }
 
-    /**
-     * get the spread
-     * @param max
-     * @param min
-     * @return the spread
-     */
-    private int spread(String max, String min){
-        int spread = Integer.parseInt(max) - Integer.parseInt(min);
-        return spread;
-    }
 }
