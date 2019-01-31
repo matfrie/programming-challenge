@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class SpreadCalculator {
 
+
+    /**
+     * Calculate the row with the least spread between the tow given colums out of the data
+     * @param data the with tha table
+     * @param Colum1 the first Column
+     * @param Colum2 the first Column
+     * @return the number of the row with the least spread
+     */
     public static int minSpreadRow(ArrayList<String> data, int Colum1, int Colum2){
 
         int MinSpreadRow = 0;
@@ -11,7 +19,7 @@ public class SpreadCalculator {
 
         for(int i = 0; i < data.size(); i++){
 
-            //extract day, minTemp and maxTamp out of the data
+            //extract day, min and max out of the data
             String[] currentRow = data.get(i).split(",");
             int currentMaxTemp = Integer.parseInt(currentRow[Colum1]);
             int currentMinTemp = Integer.parseInt(currentRow[Colum2]);
