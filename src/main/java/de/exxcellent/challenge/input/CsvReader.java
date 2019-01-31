@@ -24,6 +24,9 @@ public class CsvReader implements Reader{
             e.printStackTrace();
         }
 
+        //ignore first line
+        inputStram.next();
+
         while (inputStram.hasNext()){
             String row = inputStram.next();
             data.add(row);
