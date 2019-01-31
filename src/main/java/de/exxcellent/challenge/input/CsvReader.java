@@ -21,13 +21,8 @@ public class CsvReader implements Reader{
         ArrayList<String> data = new ArrayList<>();
         File file = new File(filePath);
 
-
-        Scanner inputStram = null;
         try {
-            inputStram = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+            Scanner inputStram = new Scanner(file);
 
         //ignore first line
         inputStram.next();
@@ -35,9 +30,18 @@ public class CsvReader implements Reader{
 
         while (inputStram.hasNext()){
             //take the next row and add ist to the data
+            //ignore first line
             String row = inputStram.next();
-            data.add(row);
+
+            while (inputStram.hasNext()){
+                row = inputStram.next();
+                data.add(row);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+
 
         return data;
     }
