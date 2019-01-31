@@ -32,6 +32,7 @@ public class FootballdataHandler {
 
         String minSpreadTeam = "";
 
+        //go to through till the row column and get the day
         for (int k = 0; k <= minSpreadRow; k++) {
             String[] currentRow = data.get(k).split(",");
             minSpreadTeam = currentRow[0];

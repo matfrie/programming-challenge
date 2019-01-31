@@ -32,7 +32,7 @@ public class WeaterdataHandler {
 
         String minSpreadDay = "";
 
-        //go to through till the right column and get the day
+        //go to through till the right row and get the day
         for (int k = 0; k <= minSpreadDayRow; k++) {
             String[] currentRow = data.get(k).split(",");
             minSpreadDay = currentRow[0];

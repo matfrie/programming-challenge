@@ -20,10 +20,11 @@ public final class App {
         WeaterdataHandler weaterdataHandler = new WeaterdataHandler();
         FootballdataHandler footballdataHandler = new FootballdataHandler();
 
+
         String dayWithSmallestTempSpread = weaterdataHandler.dayWithMinimalTemperatureSpread("src\\main\\resources\\de\\exxcellent\\challenge\\testWeatherData");     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
+        String teamWithSmallestGoalSpread = footballdataHandler.minSpreadFoodballTeam("src\\main\\resources\\de\\exxcellent\\challenge\\testFootballData"); // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
