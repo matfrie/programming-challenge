@@ -26,6 +26,8 @@ public class WeaterdataHandler {
 
         int minSpreadDay = 0;
 
+        data = (ArrayList<String>) reader.getData(filePath);
+
         int minSpreadDayRow = SpreadCalculator.minSpreadRow(data, 1,2);
 
         for (int k = 0; k <= minSpreadDayRow; k++) {
