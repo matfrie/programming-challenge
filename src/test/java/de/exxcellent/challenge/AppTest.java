@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package test.java.de.exxcellent.challenge;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ public class AppTest {
 
     @Test
     public void runFootball() {
-        App.main("--football", "football.csv");
+        de.exxcellent.challenge.App.main("--football", "football.csv");
     }
 
 }
