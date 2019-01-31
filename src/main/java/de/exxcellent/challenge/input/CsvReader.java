@@ -11,8 +11,7 @@ import java.util.Scanner;
  * Imlementation of Reader Interface for Csv files
  * @author Matthias Friedrich
  */
-public class CsvReader implements Reader{
-
+public class CsvReader implements Reader {
 
 
     @Override
@@ -24,24 +23,20 @@ public class CsvReader implements Reader{
         try {
             Scanner inputStram = new Scanner(file);
 
-        //ignore first line
-        inputStram.next();
+            inputStram.next();
 
+            while (inputStram.hasNext()) {
+                //take the next row and add ist to the data
+                //ignore first line
 
-        while (inputStram.hasNext()){
-            //take the next row and add ist to the data
-            //ignore first line
-            String row = inputStram.next();
-
-            while (inputStram.hasNext()){
-                row = inputStram.next();
-                data.add(row);
+                while (inputStram.hasNext()) {
+                    String row = inputStram.next();
+                    data.add(row);
+                }
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
 
         return data;
     }
