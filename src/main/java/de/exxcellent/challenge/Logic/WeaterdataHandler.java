@@ -22,7 +22,7 @@ public class WeaterdataHandler {
      * @param filePath the file to read from
      * @return the day with the least spread
      */
-    public int dayWithMinimalTemperatureSpread(String filePath){
+    public String dayWithMinimalTemperatureSpread(String filePath){
 
         //get the data of the file
         data = (ArrayList<String>) reader.getData(filePath);
@@ -30,11 +30,12 @@ public class WeaterdataHandler {
         //get the row with the least spread
         int minSpreadDayRow = SpreadCalculator.minSpreadRow(data, 1,2);
 
-        int minSpreadDay = 0;
+        String minSpreadDay = "";
 
+        //go to through till the right column and get the day
         for (int k = 0; k <= minSpreadDayRow; k++) {
             String[] currentRow = data.get(k).split(",");
-            minSpreadDay = Integer.parseInt(currentRow[0]);
+            minSpreadDay = currentRow[0];
         }
 
         return minSpreadDay;

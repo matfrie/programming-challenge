@@ -13,7 +13,7 @@ public class WeaterdataHandlerTest {
         WeaterdataHandler handler = new WeaterdataHandler();
 
         assertEquals (handler.dayWithMinimalTemperatureSpread(
-                "C:\\Users\\Matze\\projekte\\programming-challenge\\src\\main\\resources\\de\\exxcellent\\challenge\\testWeatherData")
+                "src\\main\\resources\\de\\exxcellent\\challenge\\testWeatherData")
         ,5);
     }
 }

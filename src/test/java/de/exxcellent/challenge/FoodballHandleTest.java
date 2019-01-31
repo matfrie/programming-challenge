@@ -13,7 +13,7 @@ public class FoodballHandleTest {
         FootballdataHandler handler =  new FootballdataHandler();
 
         assertEquals (handler.minSpreadFoodballTeam(
-                "C:\\Users\\Matze\\projekte\\programming-challenge\\src\\main\\resources\\de\\exxcellent\\challenge\\testFootballData")
+                "src\\main\\resources\\de\\exxcellent\\challenge\\testFootballData")
                 ,"Liverpool");
     }
 }
