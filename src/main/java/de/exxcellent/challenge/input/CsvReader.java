@@ -20,17 +20,19 @@ public class CsvReader implements Reader{
         Scanner inputStram = null;
         try {
             inputStram = new Scanner(file);
+
+            //ignore first line
+            inputStram.next();
+
+            while (inputStram.hasNext()){
+                String row = inputStram.next();
+                data.add(row);
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        //ignore first line
-        inputStram.next();
-
-        while (inputStram.hasNext()){
-            String row = inputStram.next();
-            data.add(row);
-        }
 
         return data;
     }
