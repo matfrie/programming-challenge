@@ -17,15 +17,15 @@ public class CsvReader implements Reader{
         ArrayList<String> data = new ArrayList<>();
         File file = new File(filePath);
 
-        Scanner inputStram = null;
+
         try {
-            inputStram = new Scanner(file);
+            Scanner inputStram = new Scanner(file);
 
             //ignore first line
-            inputStram.next();
+            String row = inputStram.next();
 
             while (inputStram.hasNext()){
-                String row = inputStram.next();
+                row = inputStram.next();
                 data.add(row);
             }
 

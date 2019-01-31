@@ -34,7 +34,7 @@ public class WeaterdataHandler {
 
             //extract day, minTemp and maxTamp out of the data
             String[] currentRow = data.get(i).split(",");
-            String currentDay = currentRow[1];
+            String currentDay = currentRow[0];
             String currentMaxTemp = currentRow[1];
             String currentMinTemp = currentRow[2];
 
