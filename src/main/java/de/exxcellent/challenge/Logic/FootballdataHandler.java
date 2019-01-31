@@ -4,12 +4,12 @@ import main.java.de.exxcellent.challenge.input.CsvReader;
 
 import java.util.ArrayList;
 
-public class FoorballdataHandler {
+public class FootballdataHandler {
 
     CsvReader reader;
     ArrayList<String> data;
 
-    public FoorballdataHandler(){
+    public FootballdataHandler(){
         reader = new CsvReader();
     }
 

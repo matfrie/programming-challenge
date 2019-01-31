@@ -44,6 +44,12 @@ public class SpreadCalculator {
      * @return the spread
      */
     public static int spread(int max, int min){
+        //if max is lower than mix, switch them
+        if(max < min){
+            int temp = min;
+            min = max;
+            max =min;
+        }
 
         int spread = max - min;
         return spread;
