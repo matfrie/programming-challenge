@@ -30,7 +30,6 @@ public class CsvReader implements Reader{
         while (inputStram.hasNext()){
             String row = inputStram.next();
             data.add(row);
-            System.out.print(data);
         }
 
         return data;
