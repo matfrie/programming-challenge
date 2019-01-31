@@ -24,37 +24,16 @@ public class WeaterdataHandler {
      */
     public int dayWithMinimalTemperatureSpread(String filePath){
 
-        int MinSpreadDay = 0;
-        int MinSpread = 0;
+        int minSpreadDay = 0;
 
-        data = (ArrayList<String>) reader.getData(filePath);
+        int minSpreadDayRow = SpreadCalculator.minSpreadRow(data, 1,2);
 
-        //finde the day with the least tempratur spread
-        for(int i = 1; i < data.size(); i++){
-
-            //extract day, minTemp and maxTamp out of the data
-            String[] currentRow = data.get(i).split(",");
-            String currentDay = currentRow[0];
-            String currentMaxTemp = currentRow[1];
-            String currentMinTemp = currentRow[2];
-
-            //the firs day is always the current min spread
-            if(MinSpreadDay == 0) {
-                MinSpreadDay = 1;
-                MinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
-            }
-
-            //test if the current day is the day with the least spread
-            else {
-                int currentMinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
-
-                if(currentMinSpread < MinSpread ){
-                    MinSpreadDay = Integer.parseInt(currentDay);
-                    MinSpread = currentMinSpread;
-                }
-            }
+        for (int k = 0; k <= minSpreadDayRow; k++) {
+            String[] currentRow = data.get(k).split(",");
+            minSpreadDay = Integer.parseInt(currentRow[0]);
         }
-        return MinSpreadDay;
+
+        return minSpreadDay;
     }
 
 }

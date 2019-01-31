@@ -1,4 +1,6 @@
 main\java\de\exxcellent\challenge\Logic\WeaterdataHandler.class
+main\java\de\exxcellent\challenge\Logic\FoorballdataHandler.class
 main\java\de\exxcellent\challenge\input\CsvReader.class
 main\java\de\exxcellent\challenge\App.class
 main\java\de\exxcellent\challenge\input\Reader.class
+main\java\de\exxcellent\challenge\Logic\SpreadCalculator.class
