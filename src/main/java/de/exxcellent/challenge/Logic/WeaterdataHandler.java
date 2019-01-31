@@ -6,7 +6,7 @@ import main.java.de.exxcellent.challenge.input.CsvReader;
 import java.util.ArrayList;
 
 /**
- * Class that extracts and uses data from the Variable given bei the Reader
+ * Class that extracts and uses weatherdata from the Variable given bei the Reader
  * @author Matthias Friedrich
  */
 public class WeaterdataHandler {
@@ -24,11 +24,13 @@ public class WeaterdataHandler {
      */
     public int dayWithMinimalTemperatureSpread(String filePath){
 
-        int minSpreadDay = 0;
-
+        //get the data of the file
         data = (ArrayList<String>) reader.getData(filePath);
 
+        //get the row with the least spread
         int minSpreadDayRow = SpreadCalculator.minSpreadRow(data, 1,2);
+
+        int minSpreadDay = 0;
 
         for (int k = 0; k <= minSpreadDayRow; k++) {
             String[] currentRow = data.get(k).split(",");

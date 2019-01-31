@@ -4,6 +4,10 @@ import main.java.de.exxcellent.challenge.input.CsvReader;
 
 import java.util.ArrayList;
 
+/**
+ * Class that extracts and uses football data from the Variable given bei the Reader
+ * @author Matthias Friedrich
+ */
 public class FootballdataHandler {
 
     CsvReader reader;

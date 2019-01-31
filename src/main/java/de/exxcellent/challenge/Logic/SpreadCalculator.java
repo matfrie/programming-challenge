@@ -30,11 +30,9 @@ public class SpreadCalculator {
                 MinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
             }
 
-
-
             //test if the current day is the day with the least spread
             else {
-                int currentMinSpread = SpreadCalculator.spread(currentMaxTemp, currentMinTemp);
+                int currentMinSpread = spread(currentMaxTemp, currentMinTemp);
 
                 if(currentMinSpread < MinSpread ){
                     MinSpreadRow = i;
