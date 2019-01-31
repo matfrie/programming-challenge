@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Imlementation of Reader Interface for Csv files
+ * @author Matthias Friedrich
+ */
 public class CsvReader implements Reader{
 
 
@@ -16,6 +20,7 @@ public class CsvReader implements Reader{
 
         ArrayList<String> data = new ArrayList<>();
         File file = new File(filePath);
+
 
         Scanner inputStram = null;
         try {
@@ -27,7 +32,9 @@ public class CsvReader implements Reader{
         //ignore first line
         inputStram.next();
 
+
         while (inputStram.hasNext()){
+            //take the next row and add ist to the data
             String row = inputStram.next();
             data.add(row);
         }

@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package main.java.de.exxcellent.challenge;
 
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software

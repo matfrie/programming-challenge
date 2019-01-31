@@ -6,8 +6,8 @@ import java.util.Map;
 public interface Reader {
 
     /**
-     * get the data from the File
-     * @return am map with key: row number, value: colum values in a List
+     * get the data from the File and write ist into a List
+     * @return am List with every entry beeing the next row of the data
      */
     public List<String> getData(String filePath);
 }

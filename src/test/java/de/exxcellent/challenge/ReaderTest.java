@@ -23,6 +23,6 @@ public class ReaderTest {
 
     @Test
     public void ReaderTest() { assertEquals
-            (reader.getData("C:\\Users\\Matze\\projekte\\programming-challenge\\src\\main\\resources\\de\\exxcellent\\challenge\\test.csv")
+            (reader.getData("src\\main\\resources\\de\\exxcellent\\challenge\\test.csv")
                     ,data);}
 }
